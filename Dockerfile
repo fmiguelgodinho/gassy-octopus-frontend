@@ -11,6 +11,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle/
 RUN apt-get install -y libc6-dev-i386 autoconf
 COPY juds.tar.gz /
 RUN tar -xzvf juds.tar.gz
+RUN apt-get install --reinstall make
 RUN cd juds && ./autoconf.sh && ./configure && make && make install
 RUN rm -rf juds
 # setup hlf bftsmart
