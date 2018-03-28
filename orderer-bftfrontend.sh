@@ -9,4 +9,4 @@ sleep 15
 
 # run go component: orderer binary
 cd /opt/gopath/src/github.com/hyperledger/fabric
-./orderer
+orderer
