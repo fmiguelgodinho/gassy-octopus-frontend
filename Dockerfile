@@ -19,3 +19,4 @@ ENV LOCAL_HLF_INSTALL $GOPATH/src/github.com/hyperledger/fabric
 COPY hyperledger-bftsmart.tar.gz $LOCAL_HLF_INSTALL/
 RUN cd $LOCAL_HLF_INSTALL && mkdir hyperledger-bftsmart && tar -xzf hyperledger-bftsmart.tar.gz hyperledger-bftsmart -C hyperledger-bftsmart && rm -f hyperledger-bftsmart.tar.gz
 RUN cd $LOCAL_HLF_INSTALL/hyperledger-bftsmart && ant
+COPY orderer-bftfrontend.sh /opt/gopath/src/github.com/hyperledger/fabric
